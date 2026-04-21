@@ -1,5 +1,12 @@
+import JobList from "./components/JobList";
+
 function App() {
-  return <h1>Job Tracker UI</h1>;
+  return (
+    <div>
+      <h1>Job Tracker</h1>
+      <JobList />
+    </div>
+  );
 }
 
 export default App;
