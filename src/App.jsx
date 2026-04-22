@@ -1,11 +1,11 @@
-import JobList from "./components/JobList";
+import { Routes, Route } from "react-router-dom";
+import JobListPage from "./pages/JobListPage";
 
 function App() {
   return (
-    <div>
-      <h1>Job Tracker</h1>
-      <JobList />
-    </div>
+    <Routes>
+      <Route path="/" element={<JobListPage />} />
+    </Routes>
   );
 }
 
