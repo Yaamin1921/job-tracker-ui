@@ -1,4 +1,5 @@
-const BASE_URL = "http://localhost:8080/api";
+//const BASE_URL = "http://localhost:8080/api";
+  const BASE_URL= "https://job-tracker-production-4503.up.railway.app/api"
 
 export async function getJobs() {
   try {
@@ -9,4 +10,16 @@ export async function getJobs() {
     console.error(err);
     throw err;
   }
+}
+
+export async function createJob(jobData) {
+  const res = await fetch(`${BASE_URL}/jobs`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(jobData),
+  });
+
+  return res.json();
 }
